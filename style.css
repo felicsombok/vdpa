@@ -4,46 +4,59 @@ body {
     color: #00247D;
 }
 
-.hero-section {
-    background-color: #00247D;
-    padding: 80px 0;
-    color: #FFFFFF;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/1200px-Flag_of_Virginia.svg.png');
-    background-size: auto;
-    background-position: center;
-    background-blend-mode: overlay;
+.flag-section {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #B22234;
 }
 
-.hero-section h1 {
-    font-weight: bold;
-}
-
-.nav-card {
+.flag-img {
+    width: 100%;
+    height: auto;
     display: block;
-    text-decoration: none;
+}
+
+.flag-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.flag-title h1 {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.flag-title p {
+    color: #FFFFFF;
+}
+
+.button-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.1em;
     color: #00247D;
     background-color: #FFFFFF;
     border: 2px solid #00247D;
-    border-radius: 15px;
-    padding: 30px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.nav-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.nav-card h3 {
+    border-radius: 30px;
+    text-decoration: none;
     font-weight: bold;
-    color: #00247D;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.nav-icon {
-    font-size: 3rem;
-    color: #FFD700;
-    margin-bottom: 15px;
+.nav-btn:hover {
+    background-color: #FFD700;
+    color: #00247D;
 }
 
 footer {
