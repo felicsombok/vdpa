@@ -6,33 +6,21 @@ body {
     text-align: center;
 }
 
-/* Centered Layout for Full Site */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
-    text-align: center;
-}
-
-/* Flag Icon in Navbar */
-.flag-icon {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
-
-/* Navigation Bar */
+/* Full-Width Navigation Bar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+    background-color: #1A1A40;
+    padding: 10px 0;
+}
+
+.navbar .container-fluid {
     max-width: 900px;
     margin: 0 auto;
-    border-radius: 0 0 10px 10px;
+    text-align: center;
 }
 
 .navbar-brand {
@@ -56,14 +44,13 @@ body {
     font-weight: bold;
 }
 
-/* Main Navigation Buttons */
+/* Stacked Navigation Buttons */
 .button-row {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 300px;
+    margin: 30px auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     gap: 15px;
-    flex-wrap: wrap;
 }
 
 .nav-card {
@@ -71,14 +58,13 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 85px;
-    height: 85px;
-    padding: 5px;
+    width: 100%;
+    padding: 10px;
     text-align: center;
     color: #1A1A40;
     background-color: #FFFFFF;
     border: 1px solid #1A1A40;
-    border-radius: 8px;
+    border-radius: 5px;
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -99,34 +85,15 @@ body {
 
 .nav-card span {
     font-weight: bold;
-    font-size: 0.75em;
+    font-size: 0.85em;
     margin: 0;
 }
 
-/* Footer */
+/* Full-Width Footer */
 footer {
-    font-size: 0.8em;
-    margin-top: 15px;
+    width: 100%;
     background-color: #1A1A40;
     color: #FFFFFF;
     padding: 10px 0;
-    max-width: 900px;
-    margin: 0 auto;
-    border-radius: 10px 10px 0 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .nav-card {
-        width: 70px;
-        height: 70px;
-        font-size: 0.8em;
-    }
-    .nav-icon {
-        font-size: 1.1rem;
-    }
-
-    .container, .navbar, footer {
-        max-width: 95%;
-    }
+    font-size: 0.8em;
 }
