@@ -6,6 +6,14 @@ body {
     text-align: center;
 }
 
+/* Centered Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 /* Flag Icon in Navbar */
 .flag-icon {
     width: 35px;
@@ -44,13 +52,14 @@ body {
     font-weight: bold;
 }
 
-/* Navigation Buttons */
+/* Main Navigation Buttons */
 .button-row {
+    max-width: 800px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: nowrap;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-card {
@@ -94,4 +103,19 @@ body {
 footer {
     font-size: 0.8em;
     margin-top: 15px;
+    background-color: #1A1A40;
+    color: #FFFFFF;
+    padding: 10px 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .nav-card {
+        width: 80px;
+        height: 80px;
+        font-size: 0.8em;
+    }
+    .nav-icon {
+        font-size: 1.2rem;
+    }
 }
