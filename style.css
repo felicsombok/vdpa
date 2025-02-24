@@ -14,3 +14,26 @@ h2 {
 .navbar-nav .nav-link.active {
     color: #007bff !important;
 }
+
+#who-we-are .card {
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+#who-we-are .card:hover {
+    transform: scale(1.05);
+}
+
+#who-we-are .card-title {
+    font-weight: bold;
+}
+
+#who-we-are .btn-outline-primary {
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#who-we-are .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+}
