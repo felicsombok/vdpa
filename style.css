@@ -1,72 +1,50 @@
 body {
-    font-family: 'Georgia', serif;
+    font-family: 'Merriweather', serif;
     background-color: #F4F4F9;
     color: #333;
 }
 
-.navbar {
+.navbar-brand img {
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.hero-section {
     background-color: #00247D;
-}
-
-.navbar .nav-link {
-    color: #FFFFFF !important;
-}
-
-.navbar .nav-link.active {
-    color: #FFD700 !important;
-}
-
-.navbar .navbar-brand {
-    color: #FFFFFF !important;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-h2, h3, h4 {
-    color: #00247D;
-    font-weight: bold;
-}
-
-a.btn-primary {
-    background-color: #B22234;
-    border: none;
-    border-radius: 30px;
+    padding: 80px 0;
     color: #FFFFFF;
-    transition: background-color 0.3s, color 0.3s;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/1200px-Flag_of_Virginia.svg.png');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
 }
 
-a.btn-primary:hover {
+.hero-section h1 {
+    font-weight: bold;
+}
+
+.hero-section .btn-warning {
     background-color: #FFD700;
+    border: none;
     color: #00247D;
-}
-
-footer {
-    background-color: #00247D;
-    color: #FFFFFF;
-}
-
-footer p {
-    margin: 0;
-}
-
-.card {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.card-title {
-    color: #B22234;
     font-weight: bold;
+    border-radius: 30px;
 }
 
-.card-text {
-    color: #333;
+.hero-section .btn-warning:hover {
+    background-color: #FFC107;
+    color: #FFFFFF;
 }
 
 .wreath-border {
-    border: 4px solid #00247D;
+    border: 5px solid #B22234;
+    padding: 20px;
     border-radius: 15px;
-    padding: 15px;
-    background: #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #FFFFFF;
+}
+
+.wreath-border h2 {
+    color: #B22234;
+    font-weight: bold;
 }

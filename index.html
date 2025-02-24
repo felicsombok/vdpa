@@ -6,13 +6,19 @@
     <title>Virginia CDPA - Home</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Serif Style -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00247D;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Virginia CDPA</a>
+            <a class="navbar-brand" href="index.html">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/1200px-Flag_of_Virginia.svg.png" alt="VA Logo" style="width: 40px; height: auto; margin-right: 10px;">
+                Virginia CDPA
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,17 +41,26 @@
         </div>
     </nav>
 
-    <!-- Homepage Content -->
-    <section class="py-5 text-center">
-        <div class="wreath-border">
-            <h2>Who We Are</h2>
-            <p class="lead">We are committed to protecting your consumer data rights under the Virginia CDPA.</p>
+    <!-- Hero Section -->
+    <section class="hero-section text-center text-white">
+        <div class="container">
+            <h1>Welcome to Virginia CDPA</h1>
+            <p class="lead">Protecting Your Consumer Data Rights Under the Virginia Consumer Data Protection Act.</p>
+            <a href="who-we-are.html" class="btn btn-warning mt-3">Learn More</a>
         </div>
-        
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="py-5 text-center">
+        <div class="wreath-border container">
+            <h2 class="mb-3">Who We Are</h2>
+            <p class="lead">We are committed to protecting your consumer data rights under the Virginia CDPA.</p>
+            <p class="mt-3">The Virginia Data Protection Agency ensures compliance with the CDPA, empowering consumers with control over their personal data. Our mission is to promote transparency, security, and accountability.</p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3">
+    <footer class="text-white text-center p-3" style="background-color: #00247D;">
         <p>&copy; 2025 Virginia CDPA. All rights reserved.</p>
     </footer>
 
@@ -53,3 +68,4 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
