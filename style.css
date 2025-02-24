@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.navbar-nav .nav-link.active {
+    color: #007bff !important;
+}
