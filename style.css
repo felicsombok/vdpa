@@ -1,50 +1,35 @@
 body {
     font-family: 'Merriweather', serif;
     background-color: #F4F4F9;
-    color: #333;
-}
-
-.navbar-brand img {
-    border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
-
-.hero-section {
-    background-color: #00247D;
-    padding: 80px 0;
-    color: #FFFFFF;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Virginia.svg/1200px-Flag_of_Virginia.svg.png');
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: overlay;
-}
-
-.hero-section h1 {
-    font-weight: bold;
-}
-
-.hero-section .btn-warning {
-    background-color: #FFD700;
-    border: none;
     color: #00247D;
+}
+
+h1 {
     font-weight: bold;
+    color: #00247D;
+}
+
+.nav-button {
+    display: block;
+    width: 200px;
+    padding: 15px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.1em;
+    color: #00247D;
+    background-color: white;
+    border: 2px solid #00247D;
     border-radius: 30px;
-}
-
-.hero-section .btn-warning:hover {
-    background-color: #FFC107;
-    color: #FFFFFF;
-}
-
-.wreath-border {
-    border: 5px solid #B22234;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #FFFFFF;
-}
-
-.wreath-border h2 {
-    color: #B22234;
+    text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #FFD700;
+    color: #00247D;
+}
+
+footer {
+    font-size: 0.9em;
 }
