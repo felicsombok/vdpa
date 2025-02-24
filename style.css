@@ -4,6 +4,7 @@ body {
     color: #00247D;
 }
 
+/* Hero Section */
 .hero-section {
     background-color: #00247D;
     padding: 80px 0;
@@ -18,34 +19,52 @@ body {
     font-weight: bold;
 }
 
+/* Navigation Buttons */
+.button-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
 .nav-card {
-    display: block;
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    padding: 15px;
+    text-align: center;
     color: #00247D;
     background-color: #FFFFFF;
     border: 2px solid #00247D;
-    border-radius: 15px;
-    padding: 30px 20px;
+    border-radius: 10px;
+    text-decoration: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .nav-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.nav-card h3 {
-    font-weight: bold;
+    background-color: #FFD700;
     color: #00247D;
 }
 
 .nav-icon {
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #FFD700;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+.nav-card h3,
+.nav-card span {
+    font-weight: bold;
+    font-size: 0.9em;
+    margin: 0;
 }
 
 footer {
     font-size: 0.9em;
 }
+
