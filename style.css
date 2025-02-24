@@ -6,6 +6,34 @@ body {
     text-align: center;
 }
 
+/* Navigation Bar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #FFD700 !important;
+}
+
+.nav-link {
+    color: #FFFFFF !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #FFD700 !important;
+}
+
+.nav-link.active {
+    color: #FFD700 !important;
+    font-weight: bold;
+}
+
+
 /* Hero Section */
 .hero-section {
     background-color: #00247D;
@@ -29,6 +57,7 @@ body {
     font-size: 1em;
     margin-bottom: 10px;
 }
+
 
 /* Navigation Buttons */
 .button-row {
