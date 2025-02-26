@@ -7,23 +7,21 @@ body {
     text-align: center;
 }
 
-/* Responsive Top Left Logo */
+/* Integrated Logo within Navbar */
 .logo-container {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    padding-left: 10px;
-    padding-top: 10px;
-    z-index: 1000;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .ag-logo {
-    width: 80px;
+    width: 60px;
     height: auto;
-    max-width: 15vw;
     object-fit: contain;
+    margin-right: 10px;
 }
+
 
 /* Navigation Bar */
 .navbar {
@@ -44,12 +42,15 @@ body {
 }
 
 .navbar-brand {
+    display: flex;
+    align-items: center;
     font-weight: bold;
     color: #D4AF37 !important;
     font-size: 0.9em;
     line-height: 1.2;
     white-space: normal;
 }
+
 
 .nav-link {
     color: #FFFFFF !important;
