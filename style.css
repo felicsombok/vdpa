@@ -8,9 +8,9 @@ body {
 
 /* Top Left Logo */
 .logo-container {
-    position: absolute;
-    top: 25px;
-    left: 25px;
+    position: fixed;
+    top: 15px;
+    left: 15px;
     z-index: 1000;
 }
 
@@ -18,7 +18,9 @@ body {
     width: 100px;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    background-color: #FFFFFF;
+    padding: 5px;
 }
 
 /* Navigation Bar */
