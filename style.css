@@ -6,18 +6,33 @@ body {
     text-align: center;
 }
 
-/* Full-Width Navigation Bar */
+/* Top Left Logo */
+.logo-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.ag-logo {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Navigation Bar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 999;
     width: 100%;
     background-color: #1A1A40;
     padding: 10px 0;
 }
 
-.navbar .container-fluid {
+.navbar .container {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
@@ -26,7 +41,7 @@ body {
 .navbar-brand {
     font-weight: bold;
     color: #D4AF37 !important;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
 
 .nav-link {
@@ -39,11 +54,6 @@ body {
     color: #D4AF37 !important;
 }
 
-.nav-link.active {
-    color: #D4AF37 !important;
-    font-weight: bold;
-}
-
 /* Stacked Navigation Buttons */
 .button-row {
     max-width: 300px;
@@ -51,7 +61,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    align-items: center;
 }
 
 .nav-card {
@@ -60,13 +69,12 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 250px;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     color: #1A1A40;
     background-color: #FFFFFF;
-    border: 2px solid #1A1A40;
-    border-radius: 10px;
+    border: 1px solid #1A1A40;
+    border-radius: 8px;
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.2s;
@@ -85,13 +93,7 @@ body {
     margin-bottom: 5px;
 }
 
-.nav-card span {
-    font-weight: bold;
-    font-size: 0.85em;
-    margin: 0;
-}
-
-/* Full-Width Footer */
+/* Footer */
 footer {
     width: 100%;
     background-color: #1A1A40;
@@ -101,11 +103,4 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .nav-card {
-        max-width: 200px;
-    }
 }
