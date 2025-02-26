@@ -233,4 +233,67 @@ footer {
     color: #D4AF37;
 }
 
+/* Your Privacy Rights Section */
+.bg-light {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #07274C;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #4F4F4F;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.section-divider {
+    width: 60px;
+    border: 2px solid #D4AF37;
+    margin: 20px 0;
+}
+
+.sub-title {
+    color: #07274C;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.rights-list {
+    color: #5F5F5F;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.rights-list li {
+    margin-bottom: 10px;
+}
+
+.external-link {
+    color: #07274C;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.external-link:hover {
+    color: #D4AF37;
+}
 
