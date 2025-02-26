@@ -7,20 +7,22 @@ body {
     text-align: center;
 }
 
-/* Top Left Logo */
+/* Responsive Top Left Logo */
 .logo-container {
-    position: fixed;
-    top: 0;
-    left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
     z-index: 1000;
 }
 
 .ag-logo {
-    width: 100px;
+    width: 80px;
     height: auto;
-    margin: 0;
-    padding: 0;
-    border: none;
+    max-width: 15vw;
+    object-fit: contain;
 }
 
 /* Navigation Bar */
