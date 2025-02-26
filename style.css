@@ -9,13 +9,13 @@ body {
 /* Top Left Logo */
 .logo-container {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 25px;
+    left: 25px;
     z-index: 1000;
 }
 
 .ag-logo {
-    width: 60px;
+    width: 100px;
     height: auto;
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
