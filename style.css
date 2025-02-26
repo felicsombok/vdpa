@@ -177,3 +177,15 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* External Link Styling */
+.external-link {
+    color: #07274C;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.external-link:hover {
+    color: #D4AF37;
+}
