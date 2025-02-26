@@ -2,7 +2,7 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 0.95em;
     background-color: #FFFFFF;
-    color: #1A1A40;
+    color: #07274C;
     overflow-x: hidden;
     text-align: center;
 }
@@ -23,7 +23,6 @@ body {
     border: none;
 }
 
-
 /* Navigation Bar */
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -32,7 +31,7 @@ body {
     z-index: 999;
     max-width: 100%;
     margin: 0 auto;
-    background-color: #1A1A40;
+    background-color: #07274C;
     padding: 10px 0;
 }
 
@@ -78,9 +77,9 @@ body {
     width: 100%;
     padding: 10px;
     text-align: center;
-    color: #1A1A40;
+    color: #07274C;
     background-color: #FFFFFF;
-    border: 1px solid #1A1A40;
+    border: 1px solid #07274C;
     border-radius: 8px;
     text-decoration: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -92,7 +91,7 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #D4AF37;
-    color: #1A1A40;
+    color: #07274C;
 }
 
 .nav-icon {
@@ -105,7 +104,7 @@ body {
 footer {
     max-width: 100%;
     margin: 0 auto;
-    background-color: #1A1A40;
+    background-color: #07274C;
     color: #FFFFFF;
     padding: 10px 0;
     font-size: 0.75em;
