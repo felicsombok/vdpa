@@ -13,7 +13,7 @@ body {
 }
 
 .ag-logo {
-    width: 300x;
+    width: 200x;
     height: auto;
 }
 
@@ -23,7 +23,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 999;
-    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
     background-color: #1A1A40;
     padding: 10px 0;
 }
@@ -93,7 +94,8 @@ body {
 
 /* Footer */
 footer {
-    width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
     background-color: #1A1A40;
     color: #FFFFFF;
     padding: 10px 0;
