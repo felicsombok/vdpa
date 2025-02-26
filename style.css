@@ -125,7 +125,7 @@ footer {
     }
 
     .ag-logo {
-        width: 70px;
+        width: 50px;
     }
 
     /* Adjust Navbar Title */
@@ -161,7 +161,7 @@ footer {
 @media (max-width: 480px) {
     /* Further Resize Logo */
     .ag-logo {
-        width: 50px;
+        width: 40px;
     }
 
     /* Smaller Font for Better Fit */
