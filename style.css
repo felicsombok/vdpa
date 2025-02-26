@@ -9,13 +9,19 @@ body {
 /* Top Left Logo */
 .logo-container {
     position: fixed;
-    z-index: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .ag-logo {
-    width: 100x;
+    width: 80px;
     height: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
+
 
 /* Navigation Bar */
 .navbar {
