@@ -184,6 +184,13 @@ footer {
     padding: 50px 0;
 }
 
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
 .section-title {
     color: #07274C;
     font-size: 1.8em;
@@ -201,7 +208,7 @@ footer {
 .section-divider {
     width: 60px;
     border: 2px solid #D4AF37;
-    margin: 20px auto;
+    margin: 20px 0;
 }
 
 .sub-title {
@@ -228,4 +235,5 @@ footer {
 .external-link:hover {
     color: #D4AF37;
 }
+
 
