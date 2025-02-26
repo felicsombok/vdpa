@@ -159,16 +159,12 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* Further Resize Logo */
+    /* Further Resize Logo and Text */
     .ag-logo {
         width: 40px;
     }
 
-    /* Smaller Font for Better Fit */
-    .navbar-brand {
-        font-size: 0.7em;
-    }
-
+    .navbar-brand,
     .nav-card {
         font-size: 0.7em;
     }
@@ -177,6 +173,7 @@ footer {
         font-size: 1rem;
     }
 }
+
 
 /* Who We Are Section */
 .bg-light {
