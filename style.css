@@ -17,11 +17,7 @@ body {
 .ag-logo {
     width: 120px;
     height: auto;
-    box-shadow: none;
-    border-radius: 0;
-    background: none;
 }
-
 
 /* Navigation Bar */
 .navbar {
