@@ -11,7 +11,7 @@ body {
 .logo-container {
     position: fixed;
     top: 0;
-    left: 10;
+    left: 0;
     z-index: 1000;
 }
 
@@ -111,4 +111,66 @@ footer {
     position: relative;
     bottom: 0;
     left: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Resize and Reposition Logo */
+    .logo-container {
+        top: 5px;
+        left: 5px;
+    }
+
+    .ag-logo {
+        width: 70px;
+    }
+
+    /* Adjust Navbar Title */
+    .navbar-brand {
+        font-size: 0.8em;
+        line-height: 1.1;
+    }
+
+    /* Stack Navigation Links */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.8em;
+    }
+
+    /* Adjust Main Navigation Buttons */
+    .button-row {
+        max-width: 90%;
+    }
+
+    .nav-card {
+        width: 100%;
+        font-size: 0.75em;
+    }
+
+    .nav-icon {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further Resize Logo */
+    .ag-logo {
+        width: 50px;
+    }
+
+    /* Smaller Font for Better Fit */
+    .navbar-brand {
+        font-size: 0.7em;
+    }
+
+    .nav-card {
+        font-size: 0.7em;
+    }
+
+    .nav-icon {
+        font-size: 1rem;
+    }
 }
