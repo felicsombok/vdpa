@@ -297,3 +297,98 @@ footer {
     color: #D4AF37;
 }
 
+/* File a Complaint Form */
+.bg-light {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.content-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #07274C;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #4F4F4F;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.section-divider {
+    width: 60px;
+    border: 2px solid #D4AF37;
+    margin: 20px 0;
+}
+
+.sub-title {
+    color: #07274C;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #07274C;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-control,
+.form-control-file {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #07274C;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.submit-button {
+    background-color: #07274C;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #D4AF37;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-container {
+        padding: 0 15px;
+    }
+
+    .form-control,
+    .form-control-file {
+        font-size: 0.9em;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+}

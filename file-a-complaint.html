@@ -46,7 +46,70 @@
         </div>
     </nav>
 
-    <!-- Content -->
+    <!-- File a Complaint Form -->
+    <section class="py-5 text-center bg-light">
+        <div class="content-container">
+            <h2 class="section-title">File a Complaint</h2>
+            <p class="intro-text">
+                If you believe your rights under the Virginia Consumer Data Protection Act (CDPA) have been violated, you can file a complaint using the form below.
+            </p>
+            <hr class="section-divider">
+
+            <form class="complaint-form" action="#" method="post" enctype="multipart/form-data">
+                <!-- Complainant Information -->
+                <h3 class="sub-title">Complainant Information</h3>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" class="form-control">
+                </div>
+
+                <!-- Complaint Details -->
+                <h3 class="sub-title">Details of the Complaint</h3>
+                <div class="form-group">
+                    <label for="complaint-type">Type of Complaint</label>
+                    <select id="complaint-type" name="complaint-type" class="form-control" required>
+                        <option value="" disabled selected>Select a complaint type</option>
+                        <option value="data-access">Data Access</option>
+                        <option value="correction">Correction of Data</option>
+                        <option value="deletion">Deletion of Data</option>
+                        <option value="opt-out">Opt-Out of Data Processing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-description">Description of the Complaint</label>
+                    <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
+                </div>
+
+                <!-- Supporting Documents -->
+                <h3 class="sub-title">Supporting Documents</h3>
+                <div class="form-group">
+                    <label for="documents">Upload Supporting Documents (Optional)</label>
+                    <input type="file" id="documents" name="documents" class="form-control-file">
+                </div>
+
+                <!-- Consent and Submission -->
+                <div class="form-group">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">I consent to the submission of this complaint and the processing of my personal data.</label>
+                </div>
+                <button type="submit" class="submit-button">Submit Complaint</button>
+            </form>
+        </div>
+    </section>
+
     
 
     <!-- Footer -->
