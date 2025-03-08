@@ -15,12 +15,15 @@
 </head>
 <body>
 
+    <!-- Skip Navigation Link-->
+    <a href="#main-content" class="skip-nav" tabindex="0">Skip to Main Content</a>
+
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html" aria-label="Homepage - Data Protection Office">
                 <span class="logo-container">
-                    <img src="images/ag-logo.jpg" alt="Attorney General Logo" class="ag-logo">
+                    <img src="images/ag-logo.jpg" alt="Official Logo of Virginia's Attorney General" class="ag-logo">
                 </span>
                 Attorney General of Virginia's<br>Data Protection Office
             </a>            
@@ -30,48 +33,51 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
+                        <a class="nav-link" href="who-we-are.html" aria-label="Learn more about who we are">Who We Are</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="privacy-rights.html">Your Privacy Rights</a>
+                        <a class="nav-link" href="privacy-rights.html" aria-label="Your privacy rights under VCDPA">Your Privacy Rights</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="file-a-complaint.html">File a Complaint</a>
+                        <a class="nav-link" href="file-a-complaint.html" aria-label="Submit a complaint about data protection violations">File a Complaint</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.html">FAQ</a>
+                        <a class="nav-link" href="faq.html" aria-label="Frequently Asked Questions about data protection">FAQ</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Navigation Buttons -->
-    <section class="py-4 text-center">
-        <div class="container">
-            <div class="button-row">
-                <a href="who-we-are.html" class="nav-card">
-                    <i class="bi bi-info-circle-fill nav-icon"></i>
-                    <span>Who We Are</span>
-                </a>
-                <a href="privacy-rights.html" class="nav-card">
-                    <i class="bi bi-shield-lock-fill nav-icon"></i>
-                    <span>Your Privacy Rights</span>
-                </a>
-                <a href="file-a-complaint.html" class="nav-card">
-                    <i class="bi bi-file-earmark-text-fill nav-icon"></i>
-                    <span>File a Complaint</span>
-                </a>
-                <a href="faq.html" class="nav-card">
-                    <i class="bi bi-archive-fill nav-icon"></i>
-                    <span>FAQ</span>
-                </a>
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Main Navigation Buttons -->
+        <section class="py-4 text-center">
+            <div class="container">
+                <div class="button-row">
+                    <a href="who-we-are.html" class="nav-card" aria-label="Go to Who We Are page">
+                        <i class="bi bi-info-circle-fill nav-icon" aria-hidden="true"></i>
+                        <span>Who We Are</span>
+                    </a>
+                    <a href="privacy-rights.html" class="nav-card" aria-label="Go to Your Privacy Rights page">
+                        <i class="bi bi-shield-lock-fill nav-icon" aria-hidden="true"></i>
+                        <span>Your Privacy Rights</span>
+                    </a>
+                    <a href="file-a-complaint.html" class="nav-card" aria-label="Go to File a Complaint page">
+                        <i class="bi bi-file-earmark-text-fill nav-icon" aria-hidden="true"></i>
+                        <span>File a Complaint</span>
+                    </a>
+                    <a href="faq.html" class="nav-card" aria-label="Go to Frequently Asked Questions page">
+                        <i class="bi bi-archive-fill nav-icon" aria-hidden="true"></i>
+                        <span>FAQ</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-white text-center p-3">
+    <footer class="text-white text-center p-3" role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Attorney General of Virginia. All rights reserved.</p>
         </div>

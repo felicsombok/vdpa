@@ -15,12 +15,15 @@
 </head>
 <body>
 
+    <!-- Skip to Main Content (for screen readers) -->
+    <a href="#main-content" class="skip-nav">Skip to Main Content</a>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <span class="logo-container">
-                    <img src="images/ag-logo.jpg" alt="Attorney General Logo" class="ag-logo">
+                    <img src="images/ag-logo.jpg" alt="Official Logo of Virginia's Attorney General" class="ag-logo">
                 </span>
                 Attorney General of Virginia's<br>Data Protection Office
             </a>             
@@ -31,7 +34,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="who-we-are.html">Who We Are</a></li>
                     <li class="nav-item"><a class="nav-link" href="privacy-rights.html">Your Privacy Rights</a></li>
-                    <li class="nav-item"><a class="nav-link" href="file-a-complaint.html">File a Complaint</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="file-a-complaint.html">File a Complaint</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
                 </ul>
             </div>
@@ -39,7 +42,7 @@
     </nav>
 
     <!-- File a Complaint Form -->
-    <section class="py-5 bg-light">
+    <section id="main-content" class="py-5 bg-light">
         <div class="content-container">
             <h2 class="section-title text-center">File a Complaint</h2>
             <p class="intro-text text-center">
@@ -52,11 +55,11 @@
                 <h3 class="sub-title">Your Information</h3>
                 <div class="form-group">
                     <label for="name">Full Name <span class="text-danger">*</span></label>
-                    <input type="text" id="name" name="name" class="form-control" required>
+                    <input type="text" id="name" name="name" class="form-control" required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address <span class="text-danger">*</span></label>
-                    <input type="email" id="email" name="email" class="form-control" required>
+                    <input type="email" id="email" name="email" class="form-control" required aria-required="true">
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone Number</label>
@@ -77,55 +80,26 @@
                     <label for="business-website">Website URL</label>
                     <input type="url" id="business-website" name="business-website" class="form-control">
                 </div>
-                <div class="form-group">
-                    <label for="business-contact">Contact Information (if known)</label>
-                    <textarea id="business-contact" name="business-contact" class="form-control" rows="2"></textarea>
-                </div>
 
                 <!-- Section 3: What Happened? -->
                 <h3 class="sub-title">What Happened?</h3>
-                <p class="form-text">Select the right(s) you believe were violated under the Virginia Consumer Data Protection Act (VCDPA).</p>
+                <fieldset>
+                    <legend class="form-text">Select the rights you believe were violated:</legend>
 
-                <div class="form-group">
-                    <label>Type of Violation (select all that apply) <span class="text-danger">*</span></label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="access" name="violation[]" value="access">
-                        <label class="form-check-label" for="access">
-                            <strong>Access</strong>: Confirm if your personal data is being processed and access that data.
-                        </label>
+                        <label class="form-check-label" for="access"><strong>Access</strong>: Confirm if your personal data is being processed and access that data.</label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="correction" name="violation[]" value="correction">
-                        <label class="form-check-label" for="correction">
-                            <strong>Correction</strong>: Correct inaccuracies in your personal data.
-                        </label>
+                        <label class="form-check-label" for="correction"><strong>Correction</strong>: Correct inaccuracies in your personal data.</label>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="deletion" name="violation[]" value="deletion">
-                        <label class="form-check-label" for="deletion">
-                            <strong>Deletion</strong>: Delete personal data provided by or obtained about you.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="portability" name="violation[]" value="portability">
-                        <label class="form-check-label" for="portability">
-                            <strong>Portability</strong>: Obtain a copy of your personal data in a portable and usable format.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="opt-out" name="violation[]" value="opt-out">
-                        <label class="form-check-label" for="opt-out">
-                            <strong>Opt-Out</strong>: Opt out of targeted advertising, sale of personal data, or profiling for significant decisions.
-                        </label>
-                    </div>
-                </div>
+                </fieldset>
 
-                <!-- Additional Complaint Details -->
                 <div class="form-group">
                     <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
                     <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
                 </div>
-
 
                 <!-- Section 4: Supporting Documents -->
                 <h3 class="sub-title">Supporting Documents</h3>
@@ -151,6 +125,8 @@
                 <div class="form-group text-center mt-3">
                     <button type="submit" class="btn btn-primary submit-button">Submit Complaint</button>
                 </div>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -162,12 +138,5 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS for dynamic form behavior -->
-    <script>
-        document.getElementById('prior-contact').addEventListener('change', function() {
-            const details = document.getElementById('prior-contact-details');
-            details.style.display = this.value === 'yes' ? 'block' : 'none';
-        });
-    </script>
 </body>
 </html>

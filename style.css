@@ -57,8 +57,10 @@ body {
     font-weight: 500;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus {
     color: #D4AF37 !important;
+    text-decoration: underline;
 }
 
 /* Stacked Navigation Buttons */
@@ -88,17 +90,12 @@ body {
     font-size: 0.8em;
 }
 
-.nav-card:hover {
+.nav-card:hover,
+.nav-card:focus {
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #D4AF37;
     color: #07274C;
-}
-
-.nav-icon {
-    font-size: 1.3rem;
-    color: #D4AF37;
-    margin-bottom: 5px;
 }
 
 /* Footer */
@@ -142,12 +139,13 @@ footer {
 }
 
 .body-text {
-    font-size: 0.9em;
-    color: #5F5F5F;
+    font-size: 0.95em;
+    color: #333333;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
+/* External Links */
 .external-link {
     color: #07274C;
     text-decoration: underline;
@@ -155,7 +153,8 @@ footer {
     transition: color 0.3s;
 }
 
-.external-link:hover {
+.external-link:hover,
+.external-link:focus {
     color: #D4AF37;
 }
 
@@ -181,6 +180,12 @@ footer {
     color: #07274C;
 }
 
+.form-control:focus {
+    border-color: #D4AF37;
+    outline: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
 textarea.form-control {
     resize: vertical;
 }
@@ -195,7 +200,7 @@ textarea.form-control {
     margin-right: 10px;
 }
 
-/* Conditional Fields (Hidden by Default) */
+/* Conditional Fields */
 .conditional-field {
     display: none;
     margin-top: 10px;
@@ -208,13 +213,15 @@ textarea.form-control {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 0.9em;
+    font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.submit-button:hover {
+.submit-button:hover,
+.submit-button:focus {
     background-color: #D4AF37;
+    color: #07274C;
 }
 
 /* FAQ Section Styles */
@@ -243,24 +250,26 @@ textarea.form-control {
 }
 
 .accordion-body {
-    font-size: 0.85em;
-    color: #5F5F5F;
+    font-size: 0.95em;
+    color: #333333;
     line-height: 1.6;
 }
 
-.accordion-body ul {
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-.accordion-body a {
+/* Accessibility Updates */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #D4AF37;
     color: #07274C;
-    text-decoration: underline;
+    padding: 10px;
     font-weight: bold;
+    text-decoration: none;
+    z-index: 1000;
 }
 
-.accordion-body a:hover {
-    color: #D4AF37;
+.skip-nav:focus {
+    top: 10px;
 }
 
 /* Responsive Adjustments */

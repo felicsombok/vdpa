@@ -15,12 +15,15 @@
 </head>
 <body>
 
+    <!-- Skip to Main Content Link (for screen readers) -->
+    <a href="#main-content" class="skip-nav">Skip to Main Content</a>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <span class="logo-container">
-                    <img src="images/ag-logo.jpg" alt="Attorney General Logo" class="ag-logo">
+                    <img src="images/ag-logo.jpg" alt="Official Logo of Virginia's Attorney General" class="ag-logo">
                 </span>
                 Attorney General of Virginia's<br>Data Protection Office
             </a>             
@@ -39,7 +42,7 @@
     </nav>
 
     <!-- FAQ Section -->
-    <section class="py-5 bg-light">
+    <section id="main-content" class="py-5 bg-light">
         <div class="content-container">
             <h2 class="section-title text-center">Frequently Asked Questions</h2>
             <p class="intro-text text-center">
@@ -47,17 +50,18 @@
             </p>
             <hr class="section-divider mx-auto">
 
-            <div class="accordion" id="faqAccordion">
+            <div class="accordion" id="faqAccordion" role="tablist">
                 <!-- Question 1 -->
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="true" aria-controls="a1" aria-label="Expand to learn about the VCDPA">
                             What is the Virginia Consumer Data Protection Act (VCDPA)?
                         </button>
                     </h3>
                     <div id="a1" class="accordion-collapse collapse show" aria-labelledby="q1" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            The VCDPA is a Virginia law that gives consumers rights over their personal data. It also requires businesses to be transparent about how they collect, use, and share personal information. Learn more by reading the full law <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank">here</a>.
+                            The VCDPA is a Virginia law that gives consumers rights over their personal data. It also requires businesses to be transparent about how they collect, use, and share personal information. Learn more by reading the full law 
+                            <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank" aria-describedby="vcdpa-law">here</a>.
                         </div>
                     </div>
                 </div>
@@ -65,7 +69,7 @@
                 <!-- Question 2 -->
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2" aria-label="Expand to see your rights under the VCDPA">
                             What rights do I have under the VCDPA?
                         </button>
                     </h3>
@@ -77,7 +81,7 @@
                                 <li><strong>Correction:</strong> Correct inaccuracies in your personal data.</li>
                                 <li><strong>Deletion:</strong> Request deletion of your personal data.</li>
                                 <li><strong>Portability:</strong> Obtain a copy of your data in a portable format.</li>
-                                <li><strong>Opt-Out:</strong> Opt-out of targeted advertising, data sales, or profiling for significant decisions.</li>
+                                <li><strong>Opt-Out:</strong> Opt out of targeted advertising, data sales, or profiling for significant decisions.</li>
                             </ul>
                         </div>
                     </div>
@@ -86,13 +90,14 @@
                 <!-- Question 3 -->
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3" aria-label="Expand to learn how to file a complaint">
                             How do I file a complaint if my rights have been violated?
                         </button>
                     </h3>
                     <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            If you believe a business has violated your data privacy rights, you can file a complaint with the Attorney General's Data Protection Office using our online form. <a href="file-a-complaint.html">Click here</a> to submit a complaint.
+                            If you believe a business has violated your data privacy rights, you can file a complaint with the Attorney General's Data Protection Office using our online form. 
+                            <a href="file-a-complaint.html" aria-describedby="file-complaint">Click here</a> to submit a complaint.
                         </div>
                     </div>
                 </div>
@@ -100,13 +105,14 @@
                 <!-- Question 4 -->
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4" aria-label="Expand to see which businesses must comply">
                             Which businesses must comply with the VCDPA?
                         </button>
                     </h3>
                     <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            The law applies to businesses that operate in Virginia or target Virginia consumers and meet specific thresholds based on data processing or revenue. Learn more in our <a href="privacy-rights.html">Your Privacy Rights</a> section.
+                            The law applies to businesses that operate in Virginia or target Virginia consumers and meet specific thresholds based on data processing or revenue. Learn more in our 
+                            <a href="privacy-rights.html" aria-describedby="privacy-rights">Your Privacy Rights</a> section.
                         </div>
                     </div>
                 </div>
