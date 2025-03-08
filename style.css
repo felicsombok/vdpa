@@ -1,6 +1,6 @@
 body {
     font-family: 'Merriweather', serif;
-    font-size: 0.95em;
+    font-size: 0.85em;
     background-color: #FFFFFF;
     color: #07274C;
     overflow-x: hidden;
@@ -21,7 +21,6 @@ body {
     object-fit: contain;
     margin-right: 10px;
 }
-
 
 /* Navigation Bar */
 .navbar {
@@ -50,7 +49,6 @@ body {
     line-height: 1.2;
     white-space: normal;
 }
-
 
 .nav-link {
     color: #FFFFFF !important;
@@ -116,66 +114,7 @@ footer {
     left: 0;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    /* Resize and Reposition Logo */
-    .logo-container {
-        top: 5px;
-        left: 20px;
-    }
-
-    .ag-logo {
-        width: 50px;
-    }
-
-    /* Adjust Navbar Title */
-    .navbar-brand {
-        font-size: 0.8em;
-        line-height: 1.1;
-    }
-
-    /* Stack Navigation Links */
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .navbar-nav .nav-link {
-        font-size: 0.8em;
-    }
-
-    /* Adjust Main Navigation Buttons */
-    .button-row {
-        max-width: 90%;
-    }
-
-    .nav-card {
-        width: 100%;
-        font-size: 0.75em;
-    }
-
-    .nav-icon {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Further Resize Logo and Text */
-    .ag-logo {
-        width: 40px;
-    }
-
-    .navbar-brand,
-    .nav-card {
-        font-size: 0.7em;
-    }
-
-    .nav-icon {
-        font-size: 1rem;
-    }
-}
-
-
-/* Who We Are Section */
+/* Who We Are & Privacy Rights Sections */
 .bg-light {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -190,33 +129,20 @@ footer {
 
 .section-title {
     color: #07274C;
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.intro-text {
-    font-size: 1.1em;
-    color: #4F4F4F;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.section-divider {
-    width: 60px;
-    border: 2px solid #D4AF37;
-    margin: 20px 0;
-}
-
 .sub-title {
     color: #07274C;
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-top: 30px;
 }
 
 .body-text {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #5F5F5F;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -233,117 +159,7 @@ footer {
     color: #D4AF37;
 }
 
-/* Your Privacy Rights Section */
-.bg-light {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-}
-
-.content-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 0 20px;
-}
-
-.section-title {
-    color: #07274C;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.intro-text {
-    font-size: 1.1em;
-    color: #4F4F4F;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.section-divider {
-    width: 60px;
-    border: 2px solid #D4AF37;
-    margin: 20px 0;
-}
-
-.sub-title {
-    color: #07274C;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-top: 30px;
-}
-
-.rights-list {
-    color: #5F5F5F;
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
-.rights-list li {
-    margin-bottom: 10px;
-}
-
-.external-link {
-    color: #07274C;
-    text-decoration: underline;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.external-link:hover {
-    color: #D4AF37;
-}
-
-/* File a Complaint Form Styles */
-.bg-light {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-}
-
-.content-container {
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: left;
-    padding: 0 20px;
-}
-
-/* Section Titles & Dividers */
-.section-title, .sub-title {
-    color: #07274C;
-    font-weight: bold;
-}
-
-.section-title {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-.sub-title {
-    font-size: 1.3em;
-    margin-top: 30px;
-}
-
-.section-divider {
-    width: 60px;
-    border: 2px solid #D4AF37;
-    margin: 20px 0;
-}
-
-/* General Text Styling */
-.intro-text, .form-text {
-    color: #4F4F4F;
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-.intro-text {
-    margin-bottom: 20px;
-}
-
-/* Form Elements */
+/* File a Complaint Form */
 .form-group {
     margin-bottom: 20px;
 }
@@ -361,7 +177,7 @@ footer {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     color: #07274C;
 }
 
@@ -369,10 +185,10 @@ textarea.form-control {
     resize: vertical;
 }
 
-/* Checkbox & Radio Inputs */
+/* Complaint Form Checkbox & Radio Inputs */
 .complaint-form .form-check-label {
     color: #5F5F5F;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 .complaint-form .form-check-input {
@@ -392,29 +208,13 @@ textarea.form-control {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .submit-button:hover {
     background-color: #D4AF37;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .content-container {
-        padding: 0 15px;
-    }
-
-    .form-control,
-    .form-control-file {
-        font-size: 0.9em;
-    }
-
-    .submit-button {
-        width: 100%;
-    }
 }
 
 /* FAQ Section Styles */
@@ -429,7 +229,7 @@ textarea.form-control {
     background-color: #07274C;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 0.9em;
     border: none;
 }
 
@@ -443,7 +243,7 @@ textarea.form-control {
 }
 
 .accordion-body {
-    font-size: 1em;
+    font-size: 0.85em;
     color: #5F5F5F;
     line-height: 1.6;
 }
@@ -465,11 +265,35 @@ textarea.form-control {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .faq-container {
+    .content-container {
         padding: 0 15px;
     }
-    
+
+    .form-control,
+    .form-control-file {
+        font-size: 0.85em;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
     .accordion-button {
-        font-size: 1em;
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .ag-logo {
+        width: 40px;
+    }
+
+    .navbar-brand,
+    .nav-card {
+        font-size: 0.7em;
+    }
+
+    .nav-icon {
+        font-size: 1rem;
     }
 }
