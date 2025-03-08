@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Who We Are</title>
+    <title>Who We Are - Virginia Data Protection Office</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -15,6 +15,9 @@
 </head>
 <body>
 
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-nav">Skip to Main Content</a>
+
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -22,15 +25,18 @@
                 <span class="logo-container">
                     <img src="images/ag-logo.jpg" alt="Official Logo of Virginia's Attorney General" class="ag-logo">
                 </span>
-                Attorney General of Virginia's<br>Data Protection Office
+                <span aria-label="Attorney General of Virginia's Data Protection Office">
+                    Attorney General of Virginia's<br>Data Protection Office
+                </span>
             </a>            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
+                        <a class="nav-link active" href="who-we-are.html" aria-current="page">Who We Are</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="privacy-rights.html">Your Privacy Rights</a>
@@ -47,29 +53,33 @@
     </nav>
 
     <!-- Who We Are Content -->
-    <section class="py-5 text-center bg-light">
+    <section id="main-content" class="py-5 text-center bg-light">
         <div class="content-container">
             <h2 class="section-title">Who We Are</h2>
             <p class="intro-text">
                 We are the Data Protection Office under the Attorney General of Virginia assisting consumers with claims relating to Virginia's Consumer Data Protection Act (CDPA).
             </p>
             <hr class="section-divider">
+
             <h3 class="sub-title">Our Purpose</h3>
             <p class="body-text">
                 Our sole purpose is to help you exercise your rights under the CDPA, ensuring your data privacy concerns are addressed promptly and effectively.
             </p>
+
             <h3 class="sub-title">Our Mission</h3>
             <p class="body-text">
                 We are committed to protecting consumer data rights by providing a transparent and straightforward claims process, empowering Virginians to take control of their personal information.
             </p>
+
             <p class="mt-4">
                 For more information about the Attorney General's Office, visit the 
-                <a href="https://www.oag.state.va.us/consumer-protection/" target="_blank" class="external-link">Official Consumer Protection Page</a>.
+                <a href="https://www.oag.state.va.us/consumer-protection/" target="_blank" 
+                   class="external-link" aria-label="Official Consumer Protection Page of the Virginia Attorney General's Office">
+                   Official Consumer Protection Page
+                </a>.
             </p>
         </div>
     </section>
-
-
 
     <!-- Footer -->
     <footer class="text-white text-center p-3">
@@ -80,5 +90,6 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
