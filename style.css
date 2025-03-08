@@ -52,7 +52,7 @@ body {
 
 .nav-link {
     color: #FFFFFF !important;
-    transition: color 0.3s;
+    transition: color 0.3s, text-decoration 0.3s;
     font-size: 0.9em;
     font-weight: 500;
 }
@@ -173,7 +173,7 @@ footer {
 .form-control,
 .form-control-file {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 0.9em;
@@ -211,7 +211,7 @@ textarea.form-control {
     background-color: #07274C;
     color: #FFFFFF;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
@@ -246,7 +246,7 @@ textarea.form-control {
 }
 
 .accordion-button:focus {
-    box-shadow: none;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
 .accordion-body {
@@ -270,6 +270,12 @@ textarea.form-control {
 
 .skip-nav:focus {
     top: 10px;
+}
+
+/* Focus Indicators */
+:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
 }
 
 /* Responsive Adjustments */
