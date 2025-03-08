@@ -226,18 +226,19 @@ textarea.form-control {
 
 /* FAQ Section Styles */
 .faq-container {
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     text-align: left;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .accordion-button {
     background-color: #07274C;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 0.85em;
     border: none;
+    line-height: 1.2;
 }
 
 .accordion-button:not(.collapsed) {
@@ -246,13 +247,23 @@ textarea.form-control {
 }
 
 .accordion-button:focus {
-    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 3px rgba(212, 175, 55, 0.5);
 }
 
 .accordion-body {
-    font-size: 0.95em;
+    font-size: 0.85em;
     color: #333333;
-    line-height: 1.6;
+    line-height: 1.4;
+    padding: 10px 12px;
+}
+
+.accordion-item {
+    margin-bottom: 5px; 
+}
+
+.accordion-body ul {
+    padding-left: 15px; 
+    margin-bottom: 0; 
 }
 
 /* Accessibility Updates */
