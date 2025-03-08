@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File a Complaint</title>
+    <title>File a Complaint - Virginia AG</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional CSS to align with your design */
+        .complaint-form .form-check-label {
+            color: #5F5F5F;
+            font-size: 1em;
+        }
+        .complaint-form .form-check-input {
+            margin-right: 10px;
+        }
+        .form-text {
+            color: #4F4F4F;
+            font-size: 0.9em;
+        }
+        .conditional-field {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,41 +47,33 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="who-we-are.html">Who We Are</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="privacy-rights.html">Your Privacy Rights</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="file-a-complaint.html">File a Complaint</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="public-database.html">Public Database</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="who-we-are.html">Who We Are</a></li>
+                    <li class="nav-item"><a class="nav-link" href="privacy-rights.html">Your Privacy Rights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="file-a-complaint.html">File a Complaint</a></li>
+                    <li class="nav-item"><a class="nav-link" href="public-database.html">Public Database</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- File a Complaint Form -->
-    <section class="py-5 text-center bg-light">
+    <section class="py-5 bg-light">
         <div class="content-container">
-            <h2 class="section-title">File a Complaint</h2>
-            <p class="intro-text">
-                If you believe your rights under the Virginia Consumer Data Protection Act (CDPA) have been violated, you can file a complaint using the form below.
+            <h2 class="section-title text-center">File a Complaint</h2>
+            <p class="intro-text text-center">
+                Submit a complaint if you believe your rights under the Virginia Consumer Data Protection Act (VCDPA) have been violated.
             </p>
-            <hr class="section-divider">
+            <hr class="section-divider mx-auto">
 
             <form class="complaint-form" action="#" method="post" enctype="multipart/form-data">
-                <!-- Complainant Information -->
-                <h3 class="sub-title">Complainant Information</h3>
+                <!-- Section 1: Complainant Information -->
+                <h3 class="sub-title">Your Information</h3>
                 <div class="form-group">
-                    <label for="name">Full Name</label>
+                    <label for="name">Full Name <span class="text-danger">*</span></label>
                     <input type="text" id="name" name="name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email">Email Address <span class="text-danger">*</span></label>
                     <input type="email" id="email" name="email" class="form-control" required>
                 </div>
                 <div class="form-group">
@@ -75,51 +85,101 @@
                     <input type="text" id="address" name="address" class="form-control">
                 </div>
 
-                <!-- Complaint Details -->
-                <h3 class="sub-title">Details of the Complaint</h3>
+                <!-- Section 2: Business/Organization Information -->
+                <h3 class="sub-title">Who is this complaint about?</h3>
                 <div class="form-group">
-                    <label for="complaint-type">Type of Complaint</label>
-                    <select id="complaint-type" name="complaint-type" class="form-control" required>
-                        <option value="" disabled selected>Select a complaint type</option>
-                        <option value="data-access">Data Access</option>
-                        <option value="correction">Correction of Data</option>
-                        <option value="deletion">Deletion of Data</option>
-                        <option value="opt-out">Opt-Out of Data Processing</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <label for="business-name">Business/Organization Name <span class="text-danger">*</span></label>
+                    <input type="text" id="business-name" name="business-name" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-description">Description of the Complaint</label>
+                    <label for="business-website">Website URL</label>
+                    <input type="url" id="business-website" name="business-website" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="business-contact">Contact Information (if known)</label>
+                    <textarea id="business-contact" name="business-contact" class="form-control" rows="2"></textarea>
+                </div>
+
+                <!-- Section 3: Complaint Details -->
+                <h3 class="sub-title">What Happened?</h3>
+                <div class="form-group">
+                    <label>Type of Violation (select all that apply) <span class="text-danger">*</span></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="right-to-know" name="violation[]" value="right-to-know">
+                        <label class="form-check-label" for="right-to-know">Right to Access Data</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="right-to-correct" name="violation[]" value="right-to-correct">
+                        <label class="form-check-label" for="right-to-correct">Right to Correct Data</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="right-to-delete" name="violation[]" value="right-to-delete">
+                        <label class="form-check-label" for="right-to-delete">Right to Delete Data</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="right-to-opt-out" name="violation[]" value="right-to-opt-out">
+                        <label class="form-check-label" for="right-to-opt-out">Right to Opt-Out of Data Processing</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="other-violation" name="violation[]" value="other">
+                        <label class="form-check-label" for="other-violation">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="date-of-incident">Date of Incident (if known)</label>
+                    <input type="date" id="date-of-incident" name="date-of-incident" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
                     <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
                 </div>
-
-                <!-- Supporting Documents -->
-                <h3 class="sub-title">Supporting Documents</h3>
                 <div class="form-group">
-                    <label for="documents">Upload Supporting Documents (Optional)</label>
-                    <input type="file" id="documents" name="documents" class="form-control-file">
+                    <label for="prior-contact">Did you contact the business about this issue?</label>
+                    <select id="prior-contact" name="prior-contact" class="form-control">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <textarea id="prior-contact-details" name="prior-contact-details" class="form-control conditional-field" rows="3" placeholder="If yes, please provide details"></textarea>
                 </div>
 
-                <!-- Consent and Submission -->
+                <!-- Section 4: Supporting Documents -->
+                <h3 class="sub-title">Supporting Documents</h3>
                 <div class="form-group">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <label for="consent">I consent to the submission of this complaint and the processing of my personal data.</label>
+                    <label for="documents">Upload Files (e.g., screenshots, emails)</label>
+                    <input type="file" id="documents" name="documents[]" class="form-control-file" multiple>
+                    <small class="form-text">Optional - Max 10MB per file</small>
+                </div>
+
+                <!-- Section 5: Consent and Submission -->
+                <h3 class="sub-title">Consent</h3>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                        <label class="form-check-label" for="consent">
+                            I consent to the submission of this complaint and the processing of my personal data as outlined in the VCDPA.
+                        </label>
+                    </div>
                 </div>
                 <button type="submit" class="submit-button">Submit Complaint</button>
             </form>
         </div>
     </section>
 
-    
-
     <!-- Footer -->
     <footer class="text-white text-center p-3">
         <div class="container">
-            <p>&copy; 2025 Attorney General of Virginia. All rights reserved.</p>
+            <p>© 2025 Attorney General of Virginia. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS for dynamic form behavior -->
+    <script>
+        document.getElementById('prior-contact').addEventListener('change', function() {
+            const details = document.getElementById('prior-contact-details');
+            details.style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+    </script>
 </body>
 </html>
