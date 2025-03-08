@@ -229,16 +229,16 @@ textarea.form-control {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .accordion-button {
     background-color: #07274C;
     color: #FFFFFF;
     font-weight: bold;
-    font-size: 0.85em;
+    font-size: 0.70em;
     border: none;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .accordion-button:not(.collapsed) {
@@ -251,18 +251,18 @@ textarea.form-control {
 }
 
 .accordion-body {
-    font-size: 0.85em;
+    font-size: 0.70em;
     color: #333333;
     line-height: 1.4;
-    padding: 10px 12px;
+    padding: 8px 10px;
 }
 
 .accordion-item {
-    margin-bottom: 5px; 
+    margin-bottom: 4px; 
 }
 
 .accordion-body ul {
-    padding-left: 15px; 
+    padding-left: 12px; 
     margin-bottom: 0; 
 }
 
