@@ -297,7 +297,7 @@ footer {
     color: #D4AF37;
 }
 
-/* === File a Complaint Form Styles === */
+/* File a Complaint Form Styles */
 .bg-light {
     background-color: #f9f9f9;
     padding: 50px 0;
@@ -401,7 +401,7 @@ textarea.form-control {
     background-color: #D4AF37;
 }
 
-/* === Responsive Adjustments === */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .content-container {
         padding: 0 15px;
@@ -417,3 +417,59 @@ textarea.form-control {
     }
 }
 
+/* FAQ Section Styles */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.accordion-button {
+    background-color: #07274C;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.1em;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #D4AF37;
+    color: #07274C;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-body {
+    font-size: 1em;
+    color: #5F5F5F;
+    line-height: 1.6;
+}
+
+.accordion-body ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.accordion-body a {
+    color: #07274C;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.accordion-body a:hover {
+    color: #D4AF37;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 0 15px;
+    }
+    
+    .accordion-button {
+        font-size: 1em;
+    }
+}
