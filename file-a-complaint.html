@@ -114,9 +114,15 @@
           <span id="violation-desc" class="visually-hidden">Begin typing to filter options or select from the dropdown list.</span>
           <div class="form-group">
             <label for="violation" id="violation-label">Type of Violation (select all that apply) <span class="text-danger">*</span></label>
-            <select class="form-control" id="violation" name="violation[]" multiple required aria-labelledby="violation-label"
-              aria-describedby="violation-desc">
-              <option value="access">Consumer Data Protection Act</option>
+            <span id="violation-desc" class="visually-hidden">Begin typing to filter options or select from the dropdown list.</span>
+            <select class="form-control" id="violation" name="violation[]" multiple required aria-labelledby="violation-label" aria-describedby="violation-desc">
+              <optgroup label="Data Protection">
+                <option value="data-access">Access Personal Data</option>
+                <option value="data-correction">Correct Personal Data</option>
+                <option value="data-deletion">Delete Personal Data</option>
+                <option value="data-portability">Data Portability</option>
+                <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
+              </optgroup>
               <option value="debt-collection">Debt Collection</option>
               <option value="furniture">Furniture</option>
               <option value="home-improvement">Home Improvement</option>
@@ -125,7 +131,7 @@
               <option value="retail-store">Retail Store</option>
               <option value="other">Other</option>
             </select>
-          </div>
+          </div>          
 
           <div class="form-group">
             <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
