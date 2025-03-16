@@ -83,37 +83,24 @@
                     <legend class="form-text">Select the rights you believe were violated:</legend>
 
                     <div class="form-group">
-                        <label>Type of Violation (select all that apply) <span class="text-danger">*</span></label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="access" name="violation[]" value="access">
-                            <label class="form-check-label" for="access">
-                                <strong>Access:</strong> Confirm if your personal data is being processed and access that data.
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="correction" name="violation[]" value="correction">
-                            <label class="form-check-label" for="correction">
-                                <strong>Correction:</strong> Correct inaccuracies in your personal data.
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="deletion" name="violation[]" value="deletion">
-                            <label class="form-check-label" for="deletion">
-                                <strong>Deletion:</strong> Delete personal data provided by or obtained about you.
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="portability" name="violation[]" value="portability">
-                            <label class="form-check-label" for="portability">
-                                <strong>Portability:</strong> Obtain a copy of your personal data in a portable and usable format.
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="opt-out" name="violation[]" value="opt-out">
-                            <label class="form-check-label" for="opt-out">
-                                <strong>Opt-Out:</strong> Opt out of targeted advertising, sale of personal data, or profiling for significant decisions.
-                            </label>
-                        </div>
+                        <label for="violation">Type of Violation (select all that apply) <span class="text-danger">*</span></label>
+                        <select class="form-control" id="violation" name="violation[]" multiple required>
+                            <option value="access">Access: Confirm if your personal data is being processed and access that data</option>
+                            <option value="correction">Correction: Correct inaccuracies in your personal data</option>
+                            <option value="deletion">Deletion: Delete personal data provided by or obtained about you</option>
+                            <option value="portability">Portability: Obtain a copy of your personal data in a portable and usable format</option>
+                            <option value="opt-out">Opt-Out: Opt out of targeted advertising, sale of personal data, or profiling for significant decisions</option>
+                            <option value="debt-collection">Debt Collection</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="home-improvement">Home Improvement</option>
+                            <option value="internet-transaction">Internet Transaction</option>
+                            <option value="motor-vehicle">Motor Vehicle</option>
+                            <option value="retail-store">Retail Store</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <small class="form-text text-muted">Hold down Ctrl (Windows) or Command (Mac) to select multiple options.</small>
+                    </div>
+                    
                         <div class="form-group">
                             <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
                             <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
