@@ -323,3 +323,73 @@ textarea.form-control {
         font-size: 1rem;
     }
 }
+
+/* ----- Custom Styling for Select2 Dropdown ----- */
+
+.select2-container--default .select2-selection--multiple {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px;
+    min-height: 46px;
+    font-size: 0.9em;
+    color: #07274C;
+}
+
+.select2-container--default .select2-selection--multiple:focus,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-color: #D4AF37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+    outline: none;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #07274C;
+    color: #fff;
+    border: 1px solid #07274C;
+    border-radius: 3px;
+    padding: 3px 8px;
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #D4AF37;
+    color: #07274C;
+}
+
+.select2-container--default .select2-results__option[aria-selected="true"] {
+    background-color: #07274C;
+    color: #fff;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+    color: #07274C;
+    font-size: 0.9em;
+    padding: 4px;
+}
+
+/* Fix for alignment inside form group */
+.form-group .select2-container {
+    width: 100% !important;
+}
+
+/* Improve spacing below the dropdown */
+.select2-container {
+    margin-top: 5px;
+}
+
+/* Accessibility: visually hidden class (if not already in CSS) */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
