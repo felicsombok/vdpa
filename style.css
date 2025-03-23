@@ -343,9 +343,10 @@ textarea.form-control {
     outline: none;
 }
 
+/* Selected tags shown in input field */
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
-    background-color: #07274C;
-    color: #fff;
+    background-color: #D4AF37;
+    color: #07274C;
     border: 1px solid #07274C;
     border-radius: 3px;
     padding: 3px 8px;
@@ -354,20 +355,24 @@ textarea.form-control {
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: #fff;
+    color: #07274C;
     margin-right: 5px;
 }
 
+/* Highlighted option while hovering */
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
     background-color: #D4AF37;
     color: #07274C;
 }
 
+/* Fix: Selected options inside dropdown list */
 .select2-container--default .select2-results__option[aria-selected="true"] {
-    background-color: #07274C;
-    color: #fff;
+    background-color: #D4AF37;
+    color: #07274C;
+    font-weight: bold;
 }
 
+/* Typing input field inside dropdown */
 .select2-container--default .select2-search--inline .select2-search__field {
     color: #07274C;
     font-size: 0.9em;
@@ -384,7 +389,7 @@ textarea.form-control {
     margin-top: 5px;
 }
 
-/* Accessibility: visually hidden class (if not already in CSS) */
+/* Accessibility: visually hidden class */
 .visually-hidden {
     position: absolute !important;
     height: 1px;
