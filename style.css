@@ -398,3 +398,20 @@ textarea.form-control {
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
 }
+
+.select2-selection {
+    outline: none;
+    cursor: text;
+  }
+  
+  .select2-selection:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+  }
+  
+  .select2-search__field {
+    background-color: #fff !important;
+    color: #07274C !important;
+    font-size: 1em;
+  }
+  
