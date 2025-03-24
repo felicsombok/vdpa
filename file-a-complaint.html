@@ -117,42 +117,44 @@
         <input type="text" id="business-website" name="business-website" class="form-control" required />
       </div>
 
-      <!-- What Happened? -->
-      <h3 class="sub-title">What Happened?</h3>
-      <fieldset>
-        <legend class="form-text">Please select the type of complaint:</legend>
-        <span id="violation-desc" class="visually-hidden">Begin typing to filter options or select from the dropdown list.</span>
-        <div class="form-group">
-          <label for="violation" id="violation-label">
-            Type of Violation (select all that apply) <span class="text-danger">*</span>
-          </label>
-          <span id="violation-desc" class="visually-hidden">
-            Begin typing to filter options or select from the dropdown list.
-          </span>
-          
-          <select
-            class="form-control"
-            id="violation"
-            name="violation[]"
-            multiple
-            required
-            aria-labelledby="violation-label"
-            aria-describedby="violation-desc"
-          >
-            <option value="data-access">Access Personal Data</option>
-            <option value="data-correction">Correct Personal Data</option>
-            <option value="data-deletion">Delete Personal Data</option>
-            <option value="data-portability">Data Portability</option>
-            <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
-            <option value="debt-collection">Debt Collection</option>
-            <option value="furniture">Furniture</option>
-            <option value="home-improvement">Home Improvement</option>
-            <option value="internet-transaction">Internet Transaction</option>
-            <option value="motor-vehicle">Motor Vehicle</option>
-            <option value="retail-store">Retail Store</option>
-            <option value="other">Other</option>
-          </select>          
-        </div>
+<!-- What Happened? -->
+<h3 class="sub-title">What Happened?</h3>
+<fieldset>
+  <legend class="form-text">Please select the type of complaint:</legend>
+
+  <div class="form-group">
+    <label for="violation" id="violation-label">
+      Type of Violation (select all that apply) <span class="text-danger">*</span>
+    </label>
+    <span id="violation-desc" class="visually-hidden">
+      Begin typing to filter options or select from the dropdown list.
+    </span>
+
+    <select
+      class="form-control"
+      id="violation"
+      name="violation[]"
+      multiple
+      required
+      aria-labelledby="violation-label"
+      aria-describedby="violation-desc"
+    >
+      <option value="data-access">Access Personal Data</option>
+      <option value="data-correction">Correct Personal Data</option>
+      <option value="data-deletion">Delete Personal Data</option>
+      <option value="data-portability">Data Portability</option>
+      <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
+      <option value="debt-collection">Debt Collection</option>
+      <option value="furniture">Furniture</option>
+      <option value="home-improvement">Home Improvement</option>
+      <option value="internet-transaction">Internet Transaction</option>
+      <option value="motor-vehicle">Motor Vehicle</option>
+      <option value="retail-store">Retail Store</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+</fieldset>
+
 
         <div class="form-group">
           <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
