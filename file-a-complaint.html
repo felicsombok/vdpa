@@ -31,23 +31,33 @@
       select.select2({
         placeholder: "Select the types of violations",
         width: '100%'
-      }).on('select2:open', function () {
+      });
+  
+      // Add ARIA labels once Select2 has initialized
+      setTimeout(() => {
+        const container = document.querySelector('.select2-selection');
+        const searchbox = document.querySelector('.select2-search__field');
+  
+        if (container) {
+          container.setAttribute('aria-labelledby', 'violation-label');
+        }
+  
+        if (searchbox) {
+          searchbox.setAttribute('aria-label', 'Search types of violations');
+          searchbox.setAttribute('aria-describedby', 'violation-desc'); // ✅ Use your real element
+        }
+      }, 300);
+  
+      // Also update on dropdown open, in case Select2 re-renders the search box
+      select.on('select2:open', function () {
         const searchbox = document.querySelector('.select2-search__field');
         if (searchbox) {
           searchbox.setAttribute('aria-label', 'Search types of violations');
           searchbox.setAttribute('aria-describedby', 'violation-desc');
         }
       });
-  
-      // Wait a tick for Select2 to finish rendering, then add ARIA label
-      setTimeout(() => {
-        const container = document.querySelector('.select2-selection');
-        if (container) {
-          container.setAttribute('aria-labelledby', 'violation-label');
-        }
-      }, 200);
     });
-  </script>  
+  </script>    
 </head>
 <body>
 
