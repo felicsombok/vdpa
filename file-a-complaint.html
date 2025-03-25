@@ -33,8 +33,7 @@
         width: '100%'
       });
   
-      // Add ARIA labels once Select2 has initialized
-      setTimeout(() => {
+      function applyARIA() {
         const container = document.querySelector('.select2-selection');
         const searchbox = document.querySelector('.select2-search__field');
   
@@ -44,20 +43,20 @@
   
         if (searchbox) {
           searchbox.setAttribute('aria-label', 'Search types of violations');
-          searchbox.setAttribute('aria-describedby', 'violation-desc'); // ✅ Use your real element
+          searchbox.setAttribute('aria-labelledby', 'violation-label'); 
+          searchbox.setAttribute('aria-describedby', 'violation-desc'); 
         }
-      }, 300);
+      }
   
-      // Also update on dropdown open, in case Select2 re-renders the search box
+      // Apply ARIA after init
+      setTimeout(applyARIA, 300);
+  
+      // Re-apply ARIA after dropdown opens
       select.on('select2:open', function () {
-        const searchbox = document.querySelector('.select2-search__field');
-        if (searchbox) {
-          searchbox.setAttribute('aria-label', 'Search types of violations');
-          searchbox.setAttribute('aria-describedby', 'violation-desc');
-        }
+        setTimeout(applyARIA, 50);
       });
     });
-  </script>    
+  </script>      
 </head>
 <body>
 
