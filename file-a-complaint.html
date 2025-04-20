@@ -27,30 +27,30 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const select = $('#violation');
-  
+
       select.select2({
         placeholder: "Select the types of violations",
         width: '100%'
       });
-  
+
       function applyARIA() {
         const container = document.querySelector('.select2-selection');
         const searchbox = document.querySelector('.select2-search__field');
-  
+
         if (container) {
           container.setAttribute('aria-labelledby', 'violation-label');
         }
-  
+
         if (searchbox) {
           searchbox.setAttribute('aria-label', 'Search types of violations');
           searchbox.setAttribute('aria-labelledby', 'violation-label'); 
           searchbox.setAttribute('aria-describedby', 'violation-desc'); 
         }
       }
-  
+
       // Apply ARIA after init
       setTimeout(applyARIA, 300);
-  
+
       // Re-apply ARIA after dropdown opens
       select.on('select2:open', function () {
         setTimeout(applyARIA, 50);
@@ -60,8 +60,10 @@
 </head>
 <body>
 
+<!-- Skip Navigation Link -->
 <a href="#main-content" class="skip-nav">Skip to Main Content</a>
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="index.html">
@@ -82,6 +84,7 @@
   </div>
 </nav>
 
+<!-- Main Section -->
 <section id="main-content" class="py-5 bg-light">
   <div class="content-container">
     <h2 class="section-title text-center">File a Complaint</h2>
@@ -89,11 +92,11 @@
       Use this form to report a possible violation of your consumer rights under the 
       <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank" class="external-link">
         Virginia Consumer Data Protection Act (VCDPA)
-      </a> 
-      or other consumer-related concerns. Your submission will help the Attorney General’s Office assess and address the issue.
+      </a>. Your submission will help the Attorney General’s Office assess and address the issue.
     </p>
     <hr class="section-divider mx-auto" />
 
+    <!-- Complaint Form -->
     <form class="complaint-form" action="#" method="post" enctype="multipart/form-data">
 
       <!-- Your Information -->
@@ -110,27 +113,40 @@
         <label for="phone">Phone Number</label>
         <input type="tel" id="phone" name="phone" class="form-control" />
       </div>
+
+      <!-- Dynamically structured address -->
       <div class="form-group">
-        <label for="address">Address</label>
-        <input type="text" id="address" name="address" class="form-control" />
+        <label for="address-street">Street Address</label>
+        <input type="text" id="address-street" name="address-street" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="address-city">City</label>
+        <input type="text" id="address-city" name="address-city" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="address-state">State</label>
+        <input type="text" id="address-state" name="address-state" class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="address-zip">ZIP Code</label>
+        <input type="text" id="address-zip" name="address-zip" class="form-control" />
       </div>
 
-      <!-- Who is this complaint about? -->
+      <!-- Complaint Target -->
       <h3 class="sub-title">Who is this complaint about?</h3>
       <div class="form-group">
         <label for="business-name">Business/Organization Name <span class="text-danger">*</span></label>
         <input type="text" id="business-name" name="business-name" class="form-control" required />
       </div>
       <div class="form-group">
-        <label for="business-website">City, Town or County</label>
-        <input type="text" id="business-website" name="business-website" class="form-control" required />
+        <label for="business-city">City, Town or County</label>
+        <input type="text" id="business-city" name="business-city" class="form-control" />
       </div>
 
-      <!-- What Happened? -->
+      <!-- What Happened -->
       <h3 class="sub-title">What Happened?</h3>
       <fieldset>
         <legend class="form-text">Please select the type of complaint:</legend>
-
         <div class="form-group">
           <label for="violation" id="violation-label">
             Type of Violation (select all that apply) <span class="text-danger">*</span>
@@ -138,43 +154,34 @@
           <span id="violation-desc" class="visually-hidden">
             Begin typing to filter options or select from the dropdown list.
           </span>
-
-    <select
-      class="form-control"
-      id="violation"
-      name="violation[]"
-      multiple
-      required
-      aria-labelledby="violation-label"
-      aria-describedby="violation-desc"
-    >
-      <option value="data-access">Access Personal Data</option>
-      <option value="data-correction">Correct Personal Data</option>
-      <option value="data-deletion">Delete Personal Data</option>
-      <option value="data-portability">Data Portability</option>
-      <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
-    </select>
+          <select class="form-control" id="violation" name="violation[]" multiple required aria-labelledby="violation-label" aria-describedby="violation-desc">
+            <option value="data-access">Access Personal Data</option>
+            <option value="data-correction">Correct Personal Data</option>
+            <option value="data-deletion">Delete Personal Data</option>
+            <option value="data-portability">Data Portability</option>
+            <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
+          </select>
         </div>
       </fieldset>
 
+      <!-- Complaint Description -->
+      <div class="form-group">
+        <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
+        <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
+      </div>
 
-        <div class="form-group">
-          <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
-          <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
+      <!-- Prior Contact -->
+      <div class="form-group">
+        <label>Have you already contacted the entity about the complaint? <span class="text-danger">*</span></label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="contacted-yes" name="contacted" value="yes" required />
+          <label class="form-check-label" for="contacted-yes"><strong>Yes</strong></label>
         </div>
-
-        <div class="form-group">
-          <label>Have you already contacted the entity about the complaint? <span class="text-danger">*</span></label>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="contacted-yes" name="contacted" value="yes" required />
-            <label class="form-check-label" for="contacted-yes"><strong>Yes</strong></label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" id="contacted-no" name="contacted" value="no" />
-            <label class="form-check-label" for="contacted-no"><strong>No / Not Applicable</strong></label>
-          </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" id="contacted-no" name="contacted" value="no" />
+          <label class="form-check-label" for="contacted-no"><strong>No / Not Applicable</strong></label>
         </div>
-      </fieldset>
+      </div>
 
       <!-- Supporting Documents -->
       <h3 class="sub-title">Supporting Documents</h3>
@@ -204,6 +211,7 @@
   </div>
 </section>
 
+<!-- Footer -->
 <footer class="text-white text-center p-3">
   <div class="container">
     <p>© 2025 Attorney General of Virginia. All rights reserved.</p>
