@@ -7,17 +7,25 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css" />
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 
+<!-- Skip Navigation Link -->
 <a href="#main-content" class="skip-nav">Skip to Main Content</a>
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="index.html">
@@ -26,12 +34,23 @@
       </span>
       Attorney General of Virginia
     </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
 </nav>
 
+<!-- Main Section -->
 <section id="main-content" class="py-5 bg-light">
-  <div class="container">
+  <div class="container content-container">
     <h2 class="section-title text-center">File a Complaint</h2>
+    <p class="text-center mb-4" style="max-width: 700px; margin: 0 auto;">
+      Use this form to report a possible violation of your consumer rights under the 
+      <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank" class="external-link">
+        Virginia Consumer Data Protection Act (VCDPA)
+      </a>. Your submission will help the Attorney General’s Office assess and address the issue.
+    </p>
     <hr class="section-divider mx-auto" />
 
     <!-- Disclaimer Section -->
@@ -39,136 +58,155 @@
       <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#disclaimerCollapse" aria-expanded="false" aria-controls="disclaimerCollapse">
         View Important Information Before Filing
       </button>
+
       <div class="collapse mt-3" id="disclaimerCollapse">
         <div class="card card-body bg-light" role="region" aria-label="Important Information">
           <h5><strong>Important Information – Please Read First</strong></h5>
-          <p>This form is for reporting potential violations of the <strong>Virginia Consumer Data Protection Act (VCDPA)</strong>. The Office of the Attorney General of Virginia is the sole enforcement authority.</p>
-          <p>We do not offer legal advice or represent individuals in court. Do not submit original documents or personal financial information unrelated to your complaint. Redact Social Security Numbers or unrelated details before uploading.</p>
-          <p>Complaints may be forwarded to other appropriate agencies. Responses may be subject to public disclosure under the Virginia Freedom of Information Act (FOIA).</p>
+          <p>This form is for reporting potential violations of the <strong>Virginia Consumer Data Protection Act (VCDPA)</strong>. The Office of the Attorney General of Virginia is the sole enforcement authority for these violations.</p>
+          <p>We do not offer legal advice or represent individuals in court. Do not submit original documents or personal financial information unrelated to your complaint.</p>
+          <p>Complaints may be forwarded to other appropriate agencies. Responses may be subject to public disclosure under FOIA. You may request to exclude your contact info from FOIA responses.</p>
         </div>
       </div>
+
       <div class="form-check mt-3">
-        <input class="form-check-input" type="checkbox" id="read-disclaimer" name="read-disclaimer" required />
+        <input class="form-check-input" type="checkbox" id="read-disclaimer" name="read-disclaimer" required>
         <label class="form-check-label" for="read-disclaimer">I have read and understood the information above.</label>
       </div>
     </div>
 
+    <!-- Complaint Form -->
     <form class="complaint-form" action="#" method="post" enctype="multipart/form-data">
 
       <!-- Contact Info -->
       <h3 class="sub-title">Your Contact Information</h3>
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="first-name">First Name <span class="text-danger">*</span></label>
-          <input type="text" id="first-name" name="first-name" class="form-control" required />
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="first-name">First Name <span class="text-danger">*</span></label>
+            <input type="text" id="first-name" name="first-name" class="form-control" required />
+          </div>
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="last-name">Last Name <span class="text-danger">*</span></label>
-          <input type="text" id="last-name" name="last-name" class="form-control" required />
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="last-name">Last Name <span class="text-danger">*</span></label>
+            <input type="text" id="last-name" name="last-name" class="form-control" required />
+          </div>
         </div>
       </div>
+
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="email">Email Address <span class="text-danger">*</span></label>
-          <input type="email" id="email" name="email" class="form-control" required />
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="email">Email Address <span class="text-danger">*</span></label>
+            <input type="email" id="email" name="email" class="form-control" required />
+          </div>
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" class="form-control" />
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control" />
+          </div>
         </div>
       </div>
 
       <!-- Address -->
       <h3 class="sub-title">Your Address</h3>
-      <div class="mb-3">
-        <label for="street-address">Street Address</label>
-        <input type="text" id="street-address" name="street-address" class="form-control" />
+      <div class="form-group">
+        <label for="street">Street Address</label>
+        <input type="text" id="street" name="street" class="form-control" />
       </div>
       <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="city">City</label>
-          <input type="text" id="city" name="city" class="form-control" />
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" class="form-control" />
+          </div>
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="zip">Zip Code</label>
-          <input type="text" id="zip" name="zip" class="form-control" />
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="state">State</label>
+            <select id="state" name="state" class="form-control">
+              <option value="">Select a State</option>
+              <option>Virginia</option>
+              <option>California</option>
+              <option>New York</option>
+              <!-- Add more states as needed -->
+            </select>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="state">State</label>
-          <select id="state" name="state" class="form-control">
-            <option value="">Select a state</option>
-            <option>Virginia</option>
-            <option>California</option>
-            <option>New York</option>
-            <option>Texas</option>
-            <option>Florida</option>
-            <!-- Add more states as needed -->
-          </select>
-        </div>
-        <div class="col-md-6 mb-3">
-          <label for="country">Country</label>
-          <select id="country" name="country" class="form-control">
-            <option value="">Select a country</option>
-            <option>United States</option>
-            <option>Canada</option>
-            <option>United Kingdom</option>
-            <option>Australia</option>
-            <!-- Add more countries if needed -->
-          </select>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="zip">Zip Code</label>
+            <input type="text" id="zip" name="zip" class="form-control" />
+          </div>
         </div>
       </div>
 
       <!-- Complaint Target -->
       <h3 class="sub-title">Who is this complaint about?</h3>
-      <div class="mb-3">
-        <small class="form-text text-muted">What are the name(s) of the business(es), service provider(s), contractor(s), or people that you believe violated the Virginia Consumer Data Protection Act?</small>
+      <div class="form-group">
+        <label for="business-name">Business or organization you believe violated the VCDPA <span class="text-danger">*</span></label>
         <input type="text" id="business-name" name="business-name" class="form-control" required />
       </div>
 
-      <!-- What Happened -->
+      <!-- Violation Type -->
       <h3 class="sub-title">What Happened?</h3>
-      <label id="violation-label">Type of Violation (check all that apply) <span class="text-danger">*</span></label>
-      <div class="mb-3" id="violation-options" role="group" aria-labelledby="violation-label">
-        <div class="form-check"><input class="form-check-input" type="checkbox" name="violation[]" value="access" id="v-access" required /><label class="form-check-label" for="v-access">Access Personal Data</label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" name="violation[]" value="correction" id="v-correction" /><label class="form-check-label" for="v-correction">Correct Personal Data</label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" name="violation[]" value="deletion" id="v-deletion" /><label class="form-check-label" for="v-deletion">Delete Personal Data</label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" name="violation[]" value="portability" id="v-portability" /><label class="form-check-label" for="v-portability">Data Portability</label></div>
-        <div class="form-check"><input class="form-check-input" type="checkbox" name="violation[]" value="opt-out" id="v-opt-out" /><label class="form-check-label" for="v-opt-out">Opt Out of Sale/Targeting/Profiling</label></div>
+      <label for="violation-options" class="form-label">Type of Violation (check all that apply) <span class="text-danger">*</span></label>
+      <div id="violation-options" role="group" aria-labelledby="violation-label" class="mb-3">
+        <div class="form-check">
+          <input type="checkbox" id="access" name="violation[]" value="access" class="form-check-input" required />
+          <label for="access" class="form-check-label">Access Personal Data</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="correct" name="violation[]" value="correct" class="form-check-input" />
+          <label for="correct" class="form-check-label">Correct Personal Data</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="delete" name="violation[]" value="delete" class="form-check-input" />
+          <label for="delete" class="form-check-label">Delete Personal Data</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="portability" name="violation[]" value="portability" class="form-check-input" />
+          <label for="portability" class="form-check-label">Data Portability</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="opt-out" name="violation[]" value="opt-out" class="form-check-input" />
+          <label for="opt-out" class="form-check-label">Opt-Out of Sale/Profiling</label>
+        </div>
       </div>
 
       <!-- Description -->
-      <div class="form-group mb-3">
-        <label for="complaint-description">Please describe the complaint. <span class="text-danger">*</span></label>
-        <small class="form-text text-muted">Include as many details as possible, such as the date(s), names, and what happened. (Max 4000 characters)</small>
-        <textarea id="complaint-description" name="complaint-description" class="form-control" rows="6" maxlength="4000" required></textarea>
-      </div>
-
-      <!-- Supporting -->
-      <div class="form-group mb-3">
-        <label for="supporting-description">Describe any materials you have supporting the complaint</label>
-        <small class="form-text text-muted">E.g., screenshots or emails. You may be asked to provide these via email. (Max 1000 characters)</small>
-        <textarea id="supporting-description" name="supporting-description" class="form-control" rows="4" maxlength="1000"></textarea>
+      <div class="form-group">
+        <label for="description">Describe What Happened <span class="text-danger">*</span></label>
+        <textarea id="description" name="description" class="form-control" rows="5" required></textarea>
       </div>
 
       <!-- Contacted -->
-      <div class="form-group mb-4">
-        <label>Have you contacted the entity about the complaint? <span class="text-danger">*</span></label>
-        <div class="form-check"><input class="form-check-input" type="radio" id="contacted-yes" name="contacted" value="yes" required /><label class="form-check-label" for="contacted-yes"><strong>Yes</strong></label></div>
-        <div class="form-check"><input class="form-check-input" type="radio" id="contacted-no" name="contacted" value="no" /><label class="form-check-label" for="contacted-no"><strong>No / Not Applicable</strong></label></div>
+      <div class="form-group mt-3">
+        <label>Have you contacted the business? <span class="text-danger">*</span></label>
+        <div class="form-check">
+          <input type="radio" id="contacted-yes" name="contacted" value="yes" class="form-check-input" required />
+          <label for="contacted-yes" class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" id="contacted-no" name="contacted" value="no" class="form-check-input" />
+          <label for="contacted-no" class="form-check-label">No</label>
+        </div>
       </div>
 
       <!-- Consent -->
-      <h3 class="sub-title">Consent</h3>
-      <div class="form-check mb-4">
-        <input class="form-check-input" type="checkbox" id="consent" name="consent" required />
-        <label class="form-check-label" for="consent">I consent to the submission of this complaint and the processing of my personal data under the <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank">Virginia Consumer Data Protection Act</a>.</label>
+      <div class="form-group mt-4">
+        <div class="form-check">
+          <input type="checkbox" id="consent" name="consent" class="form-check-input" required />
+          <label for="consent" class="form-check-label">
+            I consent to submitting this complaint and the processing of my personal data under the 
+            <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank">VCDPA</a>.
+          </label>
+        </div>
       </div>
 
-      <!-- Submit -->
-      <div class="text-center">
-        <button type="submit" class="btn btn-primary submit-button">Submit Complaint</button>
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Submit Complaint</button>
       </div>
     </form>
   </div>
@@ -181,8 +219,9 @@
   </div>
 </footer>
 
-<!-- Scripts -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const checkbox = document.getElementById("read-disclaimer");
@@ -196,14 +235,14 @@
           bsCollapse.hide();
         }
       });
-    }
 
-    document.querySelector("form").addEventListener("submit", function (e) {
-      if (!document.getElementById("read-disclaimer").checked) {
-        alert("You must acknowledge the important information before submitting.");
-        e.preventDefault();
-      }
-    });
+      document.querySelector("form").addEventListener("submit", function (e) {
+        if (!checkbox.checked) {
+          alert("You must acknowledge the important information before submitting.");
+          e.preventDefault();
+        }
+      });
+    }
   });
 </script>
 
