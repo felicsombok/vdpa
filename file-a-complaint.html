@@ -270,10 +270,44 @@
       </div>           
 
       <!-- Complaint Description -->
-      <div class="form-group">
-        <label for="complaint-description">Describe What Happened <span class="text-danger">*</span></label>
-        <textarea id="complaint-description" name="complaint-description" class="form-control" rows="5" required></textarea>
-      </div>
+<h3 class="sub-title">Describe the Complaint</h3>
+
+<div class="form-group">
+  <label for="complaint-description">
+    1. Please describe the complaint. <span class="text-danger">*</span>
+  </label>
+  <small class="form-text text-muted">
+    Include as many details as possible, such as the date(s), name of business(es) and people involved, and what happened. 
+    (Maximum 4000 characters)
+  </small>
+  <textarea 
+    id="complaint-description" 
+    name="complaint-description" 
+    class="form-control" 
+    rows="6" 
+    maxlength="4000" 
+    required
+  ></textarea>
+</div>
+
+<div class="form-group mt-4">
+  <label for="supporting-description">
+    2. Please describe any materials you have supporting the complaint.
+  </label>
+  <small class="form-text text-muted">
+    Example: "I have a screen shot of the business’s consent interface, and an email I sent to the business."
+    You will not be asked to submit materials in this form, but we may request these later via email (if provided).
+    (Maximum 1000 characters)
+  </small>
+  <textarea 
+    id="supporting-description" 
+    name="supporting-description" 
+    class="form-control" 
+    rows="4" 
+    maxlength="1000"
+  ></textarea>
+</div>
+
 
       <!-- Prior Contact -->
       <div class="form-group">
