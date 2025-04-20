@@ -85,38 +85,36 @@
     <h2 class="section-title text-center">File a Complaint</h2>
     <hr class="section-divider mx-auto" />
 
-    <div class="alert alert-info" role="region" aria-label="Important Information for Filing a VCDPA Complaint">
-      <h4 class="alert-heading">Important Information – Please Read First</h4>
-      <p>
-        This form is for reporting potential violations of the <strong>Virginia Consumer Data Protection Act (VCDPA)</strong>. 
-        It is reviewed by the Office of the Attorney General of Virginia, which has exclusive enforcement authority under the VCDPA.
-      </p>
-      <p>
-        We cannot offer legal advice, represent individuals, or pursue cases in court on behalf of individual complainants. 
-        If your issue is already being handled in court or by another agency, we may be unable to assist.
-      </p>
-      <p>
-        Please include only <strong>copies</strong> of relevant documentation (e.g., emails, screenshots). 
-        Do not submit original documents or personal information not related to your complaint. 
-        Redact Social Security Numbers or unrelated financial details before uploading.
-      </p>
-      <p>
-        Submitted complaints may be referred to other government entities with proper jurisdiction. 
-        Once reviewed, you may be contacted for additional information. 
-        Closed complaints may be disclosed under the Virginia Freedom of Information Act (FOIA). 
-        You may request that your contact information be withheld from FOIA responses.
-      </p>
-      <p class="mb-3">
-        If you're unsure whether your issue falls under the VCDPA, please review the <a href="https://law.lis.virginia.gov/vacodefull/title59.1/chapter53/" target="_blank">text of the law</a> or contact the 
-        <a href="https://www.oag.state.va.us/" target="_blank">Office of the Attorney General</a>.
-      </p>
+    <div class="mb-4">
+      <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#disclaimerCollapse" aria-expanded="false" aria-controls="disclaimerCollapse">
+        View Important Information Before Filing
+      </button>
     
-      <div class="form-check">
+      <div class="collapse mt-3" id="disclaimerCollapse">
+        <div class="card card-body bg-light" role="region" aria-label="Important Information">
+          <h5><strong>Important Information – Please Read First</strong></h5>
+          <p>
+            This form is for reporting potential violations of the <strong>Virginia Consumer Data Protection Act (VCDPA)</strong>. 
+            The Office of the Attorney General of Virginia is the sole enforcement authority for these violations.
+          </p>
+          <p>
+            We do not offer legal advice or represent individuals in court. Do not submit original documents or personal financial information unrelated to your complaint. 
+            Redact Social Security Numbers or unrelated details before uploading.
+          </p>
+          <p>
+            Complaints may be forwarded to other appropriate agencies. Responses may be subject to public disclosure under the Virginia Freedom of Information Act (FOIA). 
+            You may request to have your contact information excluded from FOIA responses.
+          </p>
+        </div>
+      </div>
+    
+      <div class="form-check mt-3">
         <input class="form-check-input" type="checkbox" id="read-disclaimer" name="read-disclaimer" required>
         <label class="form-check-label" for="read-disclaimer">
           I have read and understood the information above.
         </label>
       </div>
+    </div>    
     </div>    
 
     <!-- Complaint Form -->
