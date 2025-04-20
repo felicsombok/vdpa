@@ -145,24 +145,32 @@
 
       <!-- What Happened -->
       <h3 class="sub-title">What Happened?</h3>
-      <fieldset>
-        <legend class="form-text">Please select the type of complaint:</legend>
-        <div class="form-group">
-          <label for="violation" id="violation-label">
-            Type of Violation (select all that apply) <span class="text-danger">*</span>
-          </label>
-          <span id="violation-desc" class="visually-hidden">
-            Begin typing to filter options or select from the dropdown list.
-          </span>
-          <select class="form-control" id="violation" name="violation[]" multiple required aria-labelledby="violation-label" aria-describedby="violation-desc">
-            <option value="data-access">Access Personal Data</option>
-            <option value="data-correction">Correct Personal Data</option>
-            <option value="data-deletion">Delete Personal Data</option>
-            <option value="data-portability">Data Portability</option>
-            <option value="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</option>
-          </select>
+      <fieldset class="form-group">
+        <legend id="violation-label">
+          Type of Violation (check all that apply) <span class="text-danger">*</span>
+        </legend>
+      
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="data-access" name="violation[]" value="data-access" required>
+          <label class="form-check-label" for="data-access">Access Personal Data</label>
         </div>
-      </fieldset>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="data-correction" name="violation[]" value="data-correction">
+          <label class="form-check-label" for="data-correction">Correct Personal Data</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="data-deletion" name="violation[]" value="data-deletion">
+          <label class="form-check-label" for="data-deletion">Delete Personal Data</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="data-portability" name="violation[]" value="data-portability">
+          <label class="form-check-label" for="data-portability">Data Portability</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opt-out-sale" name="violation[]" value="opt-out-sale">
+          <label class="form-check-label" for="opt-out-sale">Opt Out of Sale/Targeting/Profiling of Data</label>
+        </div>
+      </fieldset>      
 
       <!-- Complaint Description -->
       <div class="form-group">
