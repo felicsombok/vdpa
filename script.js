@@ -27,3 +27,32 @@ window.onload = function() {
         });
     }
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const checkbox = document.getElementById("read-disclaimer");
+    const collapseElement = document.getElementById("disclaimerCollapse");
+  
+    if (checkbox && collapseElement) {
+      const bsCollapse = new bootstrap.Collapse(collapseElement, {
+        toggle: false
+      });
+  
+      checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+          bsCollapse.hide();
+        }
+      });
+  
+      // Prevent form submission if checkbox isn't checked
+      const form = document.querySelector("form");
+      if (form) {
+        form.addEventListener("submit", function (e) {
+          if (!checkbox.checked) {
+            alert("You must acknowledge the important information before submitting.");
+            e.preventDefault();
+          }
+        });
+      }
+    }
+  });
+  
